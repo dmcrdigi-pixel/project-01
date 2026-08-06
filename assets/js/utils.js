@@ -77,7 +77,7 @@ const NAV_LINKS = [
   { href: 'structure.html', label: 'โครงสร้างกลไก' },
   { href: 'workflow.html', label: 'การขับเคลื่อนวาระ' },
   { href: 'agenda.html', label: 'วาระสำคัญ' },
-  { href: 'analysis.html', label: 'สรุปและข้อเสนอแนะ' }
+  // { href: 'analysis.html', label: 'สรุปและข้อเสนอแนะ' }
 ];
 
 function currentPage() {
@@ -129,7 +129,7 @@ function renderFooter() {
   mount.innerHTML = `
   <footer class="mt-16 border-t border-ocean-100 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-ocean-700/70 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <p>ข้อมูลจัดทำจากการวิเคราะห์วาระการประชุมและกลไกที่เกี่ยวข้อง — แก้ไขข้อมูลได้ที่โฟลเดอร์ <code class="bg-ocean-50 px-1.5 py-0.5 rounded">data/*.json</code></p>
+      <p>กองยุทธศาสตร์และแผนงาน กรมทรัพยากรทางทะเลและชายฝั่ง</code></p>
       <p>ปีงบประมาณ พ.ศ. 2567 – 2568</p>
     </div>
   </footer>`;
