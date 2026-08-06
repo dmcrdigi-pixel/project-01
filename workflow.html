@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>การขับเคลื่อนวาระ | แดชบอร์ดกลไกการดำเนินงานทรัพยากรทางทะเลและชายฝั่ง</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-ocean-50/40 text-ocean-900 antialiased">
+  <div id="site-nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <header class="fade-in">
+      <h1 id="page-title" class="text-2xl sm:text-3xl font-extrabold text-ocean-900 leading-snug"></h1>
+      <p id="page-subtitle" class="mt-2 text-sm sm:text-base text-ocean-700/80 max-w-3xl"></p>
+    </header>
+
+    <!-- Group selector -->
+    <div id="group-tabs" class="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1"></div>
+
+    <!-- Selected group detail -->
+    <section id="group-detail" class="grid grid-cols-1 lg:grid-cols-3 gap-6"></section>
+
+    <!-- Observations -->
+    <section class="bg-white rounded-2xl shadow-card p-5">
+      <h2 id="observations-title" class="font-bold text-ocean-900 mb-4"></h2>
+      <div id="observations-list" class="space-y-2"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/workflow.js"></script>
+</body>
+</html>

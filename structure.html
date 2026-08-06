@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โครงสร้างกลไก | แดชบอร์ดกลไกการดำเนินงานทรัพยากรทางทะเลและชายฝั่ง</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-ocean-50/40 text-ocean-900 antialiased">
+  <div id="site-nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+    <header class="fade-in">
+      <h1 id="page-title" class="text-2xl sm:text-3xl font-extrabold text-ocean-900 leading-snug"></h1>
+      <p id="page-subtitle" class="mt-2 text-sm sm:text-base text-ocean-700/80 max-w-3xl"></p>
+    </header>
+
+    <!-- Totals -->
+    <section id="totals" class="grid grid-cols-2 gap-4 max-w-md"></section>
+
+    <!-- Levels -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div id="level-national"></div>
+      <div id="level-provincial"></div>
+    </section>
+
+    <!-- Escalation criteria -->
+    <section class="bg-white rounded-2xl shadow-card p-5">
+      <h2 id="escalation-title" class="font-bold text-ocean-900 mb-4"></h2>
+      <div id="escalation-list" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+    </section>
+
+    <!-- Flow tabs -->
+    <section class="bg-white rounded-2xl shadow-card p-5">
+      <div class="flex flex-wrap gap-2 mb-5" id="flow-tabs"></div>
+      <div id="flow-content"></div>
+    </section>
+
+    <!-- Gaps -->
+    <section class="bg-white rounded-2xl shadow-card p-5">
+      <h2 id="gaps-title" class="font-bold text-ocean-900 mb-4"></h2>
+      <div id="gaps-list" class="space-y-2"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/structure.js"></script>
+</body>
+</html>
