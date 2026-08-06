@@ -8,6 +8,7 @@
   <script src="assets/js/tailwind-config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-ocean-50/40 text-ocean-900 antialiased">
   <div id="site-nav"></div>
@@ -52,6 +53,12 @@
         <p id="status-total" class="text-xs text-ocean-700/60 mb-4"></p>
         <div class="chart-box !h-48 md:!h-52"><canvas id="status-chart"></canvas></div>
         <div id="status-legend" class="mt-4 space-y-2 text-sm"></div>
+        <div class="bg-amber-200 rounded-2xl p-5 mt-4">
+          <p class="text-center font-bold mb-2 text-lg">ความหมายสถานะ</p>
+          <p><strong>เสร็จสิ้น: </strong>ดำเนินการตามมติ/ข้อสั่งการครบถ้วนแล้ว</p>
+          <p><strong>อยู่ระหว่างเสนอระดับถัดไป: </strong>ดำเนินการในส่วนที่เกี่ยวข้องแล้วและอยู่ระหว่างเตรียมเสนอ/ส่งต่อไปยัง คณะอนุกรรมการ/คณะกรรมการ/ครม.</p>
+          <p><strong>ต้องเร่งรัดติดตาม: </strong>ยังไม่ได้ดำเนินการตามมติ หรือดำเนินการแล้วบางส่วน แต่ยังไม่มีความคืบหน้าเพิ่มเติมและจำเป็นต้องติดตามต่อไป</p>
+        </div>
       </div>
     </section>
 

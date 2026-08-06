@@ -5,24 +5,38 @@
   document.getElementById('fiscal-badge').textContent = data.meta.fiscalYear;
   document.getElementById('page-title').textContent = data.meta.title;
   document.getElementById('page-subtitle').textContent = data.meta.subtitle;
-
+  document.getElementById('page-subtitle').textContent = data.meta.subtitle;
+  
   // Stat cards
   const statCards = document.getElementById('stat-cards');
   statCards.innerHTML = data.stats
     .map((s, i) => {
       const t = toneClasses(s.tone);
       const darkCard = s.tone === 'dark';
+      
+      // ตรวจสอบว่าเป็นตัวเลขที่สามารถ animate ได้หรือไม่
+      const isNumeric = !isNaN(Number(s.value)) && s.value !== '' && s.value !== null;
+
       return `
       <div class="rounded-2xl shadow-card p-5 fade-in ${darkCard ? 'bg-ocean-900' : 'bg-white'}" style="animation-delay:${i * 60}ms">
         <p class="text-xs font-medium ${darkCard ? 'text-ocean-200' : 'text-ocean-700/70'}">${s.label}</p>
         <p class="mt-2 text-2xl sm:text-3xl font-extrabold ${darkCard ? 'text-white' : 'text-ocean-900'}">
-          <span class="stat-value" data-target="${s.value}">0</span>
-          <span class="text-sm font-medium ${darkCard ? 'text-ocean-200' : 'text-ocean-700/60'}">${s.unit}</span>
+          <span class="stat-value" data-target="${s.value}">${isNumeric ? 0 : s.value}</span>
+          <span class="text-sm font-medium ${darkCard ? 'text-ocean-200' : 'text-ocean-700/60'}">${s.unit || ''}</span>
         </p>
       </div>`;
     })
     .join('');
-  statCards.querySelectorAll('.stat-value').forEach((el) => animateCounter(el, Number(el.dataset.target)));
+
+  // เรียก animateCounter เฉพาะรายการที่เป็นตัวเลขเท่านั้น
+  statCards.querySelectorAll('.stat-value').forEach((el) => {
+    const targetVal = el.dataset.target;
+    const num = Number(targetVal);
+
+    if (!isNaN(num) && targetVal !== '' && targetVal !== null) {
+      animateCounter(el, num);
+    }
+  });
 
   // Bar chart: by mechanism
   document.getElementById('mechanism-title').textContent = data.byMechanism.title;
