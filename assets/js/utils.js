@@ -74,9 +74,12 @@ function animateCounter(el, target, duration = 900) {
 // ===== Shared navigation =====
 const NAV_LINKS = [
   { href: 'index.html', label: 'ภาพรวม' },
-  { href: 'structure.html', label: 'โครงสร้างกลไก' },
-  { href: 'workflow.html', label: 'การขับเคลื่อนวาระ' },
-  { href: 'agenda.html', label: 'วาระสำคัญ' },
+  { href: '2.html', label: 'โครงสร้างกลไก' },
+  { href: '3.html', label: 'การขับเคลื่อนวาระ' },
+  { href: '4.html', label: 'วาระสำคัญ' },
+  // { href: 'structure.html', label: 'โครงสร้างกลไก' },
+  // { href: 'workflow.html', label: 'การขับเคลื่อนวาระ' },
+  // { href: 'agenda.html', label: 'วาระสำคัญ' },
   // { href: 'analysis.html', label: 'สรุปและข้อเสนอแนะ' }
 ];
 
