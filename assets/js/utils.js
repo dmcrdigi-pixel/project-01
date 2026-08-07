@@ -73,10 +73,10 @@ function animateCounter(el, target, duration = 900) {
 
 // ===== Shared navigation =====
 const NAV_LINKS = [
-  { href: 'index.html', label: 'ภาพรวม' },
-  { href: '2.html', label: 'โครงสร้างกลไก' },
-  { href: '3.html', label: 'การขับเคลื่อนวาระ' },
-  { href: '4.html', label: 'วาระสำคัญ' },
+  { href: 'index.html', label: 'สรุปภาพรวมกลไกการดำเนินงานและความเชื่อมโยง' },
+  { href: '2.html', label: 'โครงสร้างและความเชื่อมโยงของกลไก' },
+  { href: '3.html', label: 'กลไกการขับเคลื่อนและสถานะการดำเนินงาน 7 กลุ่ม' },
+  { href: '4.html', label: 'สถานะการดำเนินงานและวาระที่ต้องขับเคลื่อน' },
   // { href: 'structure.html', label: 'โครงสร้างกลไก' },
   // { href: 'workflow.html', label: 'การขับเคลื่อนวาระ' },
   // { href: 'agenda.html', label: 'วาระสำคัญ' },
@@ -103,7 +103,7 @@ function renderNav() {
       <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex items-center gap-2 text-white font-bold">
           <span class="inline-flex items-center justify-center w-9 h-9 rounded bg-ocean-700 text-sand-300 p-1"><img src="./assets/img/logo.png"></span>
-          <span class="text-sm sm:text-base leading-tight">แดชบอร์ดกลไกการดำเนินงาน<br class="hidden sm:block"><span class="text-xs font-normal text-ocean-200"> ทรัพยากรทางทะเลและชายฝั่ง</span></span>
+          <span class="text-sm sm:text-base leading-tight">การวิเคราะห์กลไกการดำเนินงานและความเชื่อมโยงของคณะกรรมการระดับต่าง ๆ ภายใต้ พ.ร.บ. ทช. 2558</span>
         </a>
         <div class="hidden md:flex items-center gap-1">${linkItems}</div>
         <button id="nav-toggle" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10" aria-label="เปิดเมนู">
@@ -133,7 +133,7 @@ function renderFooter() {
   <footer class="mt-16 border-t border-ocean-100 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-ocean-700/70 flex flex-col sm:flex-row items-center justify-between gap-2">
       <p>กองยุทธศาสตร์และแผนงาน กรมทรัพยากรทางทะเลและชายฝั่ง</code></p>
-      <p>ปีงบประมาณ พ.ศ. 2567 – 2568</p>
+      <p></p>
     </div>
   </footer>`;
 }
